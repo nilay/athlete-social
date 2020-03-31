@@ -1,0 +1,33 @@
+div[data-react-class="QuestionView"] {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  min-width: 100%;
+
+  .content-wrapper {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 100%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    min-width: 100%;
+  }
+
+  .question-container {
+    align-items: flex-start;
+    border: 1px solid $border;
+    display: flex;
+    flex: 1 100%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 0.6em;
+
+    .main-content-container {
+      display: flex;
+      flex: 1 100%;
+      justify-content: flex-start;
+      min-width: 100%;
+    }
+  }
+}

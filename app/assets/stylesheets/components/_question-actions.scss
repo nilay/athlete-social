@@ -1,0 +1,28 @@
+div[data-react-class="QuestionView"] {
+  .question-actions {
+    display: none;
+  }
+
+  .desktop-actions-container {
+    display: flex;
+    flex: 1 100%;
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to(small) {
+  div[data-react-class="QuestionView"] {
+    .question-actions {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .delete-btn {
+      background-color: transparent;
+    }
+  }
+};

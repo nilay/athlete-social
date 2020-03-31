@@ -1,0 +1,53 @@
+-if params['nav'] == '0'
+  .container
+    .row
+      .col-xs-12
+        %h2{style: "margin-top:20px"} Legal
+        %ul
+          %li=link_to "Privacy Policy", tos_path(nav: 0)
+          %li=link_to "Fan's User Agreement", fan_eula_path(nav: 0)
+          %li=link_to "Athlete's User Agreement", athlete_eula_path(nav: 0)
+-else
+  #static-interior
+    %header#top.clearfix
+      #nav-top.container
+        %ul.nav.nav-pills
+          %li=link_to "Features", root_path
+          %li.active=link_to "Legal", legal_path
+          %li=mail_to "hello@theprosapp.com", "Contact Us"
+      #nav-scrolled.container-fluid.no-gutter
+        .col-sm-4
+          %button#toggle-on.toggle-button.btn.btn-primary.btn-lg{"aria-pressed" => "false", :autocomplete => "off", "data-toggle" => "button", :type => "button"}
+            %img{:src => image_path("static/menu.png")}
+          %h1
+            =link_to root_path do
+              %img.img-responsive.svg{:alt => "Pros", :src => image_path("static/pros.svg")}
+        .col-sm-8.text-right.hidden-xs
+          %ul.nav.navbar-nav
+            %li=link_to "Get The App", ENV["APPLE_APP_STORE"], {class: 'btn text-center'}
+    .container
+      .row
+        .col-xs-12
+          %h2 Legal
+          %ul
+            %li=link_to "Privacy Policy", tos_path
+            %li=link_to "Fan's User Agreement", fan_eula_path
+            %li=link_to "Athlete's User Agreement", athlete_eula_path
+
+      %footer
+        .container
+          %ul.nav.navbar-nav
+            %li=mail_to "hello@theprosapp.com", "Contact Us"
+            %li=link_to "Privacy Policy", tos_path
+    / /.container
+    #sidr
+      %nav#navbar-main{:role => "navigation"}
+        %header.clearfix
+          %button#toggle-off.toggle-button.btn.btn-primary.btn-lg{"aria-pressed" => "false", :autocomplete => "off", "data-toggle" => "button", :type => "button"}
+            %img{:src => image_path("static/menu-dark.png")}
+          =link_to root_path do
+            %img.img-responsive.svg{:alt => "Pros", :src => image_path("static/pros-dark.svg")}
+        %ul.nav.nav-pills.nav-stacked
+          %li=link_to "Features", root_path
+          %li.active=link_to "Legal", legal_path
+          %li=mail_to "hello@theprosapp.com", "Contact Us"

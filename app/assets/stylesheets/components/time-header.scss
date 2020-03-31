@@ -1,0 +1,40 @@
+.video-time-header {
+  position: relative;
+  padding: 1em;
+
+  .logo-container {
+    display: inline-block;
+    width: 30%;
+
+    .link {
+      display: inline-block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .time {
+    color: #fff;
+    display: inline-block;
+    text-align: right;
+    width: 70%;
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  .video-time-header {
+    .logo-container {
+      display: none;
+    }
+
+    .time {
+      text-align: left;
+    }
+  }
+}

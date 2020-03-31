@@ -1,0 +1,8 @@
+%script{ type: "text/template", id: "edit-question" }
+  = form_tag(admin_questions_path, method: :put, id: "editQuestionForm") do
+    = hidden_field_tag("id", "", { class: "js-question-id" })
+    .text-area-container
+      %textarea.text-area.js-edit-textarea{ placeholder: "edit question..." }
+    .footer-container
+      %button.btn.primary-btn.js-edit-question{ type: "submit" } save changes
+      %button.btn.cancel-btn.js-close-modal{ type: "button" } cancel

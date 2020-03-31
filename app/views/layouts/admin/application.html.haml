@@ -1,0 +1,56 @@
+!!! 5
+
+%html
+  %head
+    %title=render_title(title: @title)
+    = stylesheet_link_tag 'admin/application', media: 'all'
+    = yield :stylesheets
+
+    = csrf_meta_tags
+    = action_cable_meta_tag
+    %meta(content="en" http-equiv="Content-Language")
+    %meta(content="True" name="HandheldFriendly")
+    %meta(content="320" name="MobileOptimized")
+    %meta(content="on" http-equiv="cleartype")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+    %meta(name="mobile-web-app-capable" content="yes")
+    %meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    %meta(name="theme-color" content="#4E5057")
+
+    -# Favicon / Desktop icon stuff
+    %link(rel="shortcut icon" href="#{image_path('favicon.png')}" type="image/png")
+    %link(rel="icon" sizes="192x192" href="#{image_path('android-icon.png')}")
+    %link(rel="apple-touch-icon" href="#{image_path('touch-icon-retina.png')}")
+    %link(rel="apple-touch-startup-image" href="#{image_path('touch-icon-retina.png')}")
+
+  %body{ data:{ user: (current_user.id if current_user?), key: (current_user.api_key if current_user?), athlete: ("athlete" if athlete_user?(current_user)), type: get_current_user_type(current_user) } }
+    - if athlete_user?(current_user)
+      %canvas#world.party-house
+
+    .wrapper
+      - if current_user?
+        = render "shared/header"
+        - if current_user.need_navbar?
+          = react_component('NavDawer', avatar: current_user.avatar_url(:thumb, false), toggleBtn: "menu", first_name: current_user.first_name, items: [{text: "questions", url: "./questions"},{text: "athletes", url: "./athletes"}])
+
+      .content-container{ class: ("sign-in-container" unless current_user), data:{ athlete: ("athlete" if athlete_user?(current_user)) } }
+        = yield
+
+
+    = react_component('Modal', title: '', content: '')
+    = render "modals/toast_template"
+    = render "modals/content_template"
+
+    -# modal text/templates
+    - Dir["app/views/modals/templates/*"].each do |file|
+      = render :file => Rails.root.join(file).to_s
+
+
+    = javascript_include_tag 'application'
+    :javascript
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+      analytics.load("#{ENV['ANALYTICS_KEY']}");
+      analytics.page()
+      }}();
+    = yield :javascript

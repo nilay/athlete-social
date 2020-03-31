@@ -1,0 +1,286 @@
+div[data-react-class="NavDawer"] {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  height: calc(100% - 3.4375em);
+
+  .nav-drawer-container {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 2.75em;
+    transform: translateX(-100%);
+    width: 100%;
+    will-change: transform;
+    z-index: 9000;
+
+    &.active {
+      transform: translateX(0%);
+
+      .nav-drawer {
+        transform: translateX(0%);
+      }
+
+      .overlay {
+        opacity: 1;
+      }
+    }
+
+    &.outro {
+      transform: translateX(-100%);
+      transition: transform 0.3s linear;
+      transition-delay: 0.3s;
+    }
+
+    .overlay {
+      background-color: rgba(#000, 0.6);
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      width: 100%;
+    }
+
+    .nav-drawer {
+      background-color: $nav-drawer-bg;
+      height: 100%;
+      position: relative;
+      transform: translateX(-100%);
+      transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      width: 14.375em;
+      will-change: transform; // let browser know that we are changing a view
+    }
+
+    .user-profile {
+      align-items: center;
+      background-color: darken($primary-dark, 5);
+      display: flex;
+      justify-content: flex-start;
+      padding: 0.7em 1em;
+      flex: 1 0px;
+
+      .profile-img {
+        background:
+          asset-url("icons/user-default-profile.svg")
+          no-repeat
+          center
+          center
+          transparent;
+        background-size: contain;
+        border-radius: 50%;
+        height: 1.8125em;
+        margin-right: 0.7em;
+        width: 1.8125em;
+      }
+    }
+
+    .welcome-text,
+    .filter-title a,
+    .detailed-list-item a {
+      color: $nav-drawer-text;
+      font-size: $default-size;
+      font-weight: $font-light;
+      text-transform: capitalize;
+    }
+
+    .nav-list {
+      align-items: center;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .filter-item {
+      width: 100%;
+
+      &.brands-list {
+        border-bottom: 1px solid $nav-item-border;
+      }
+
+      &.athletes-list {
+        .filter-title:after {
+          display: none;
+        }
+      }
+    }
+
+    .filter-title {
+      border-top: 1px solid $nav-item-border;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+
+      a {
+        display: block;
+        height: 100%;
+        padding: 1.3em;
+        transition: color 0.3s linear;
+        width: 100%;
+
+        &.brands-nav-link:after {
+          background:
+            asset-url("icons/dropdown-triangle.svg")
+            no-repeat
+            center
+            center
+            transparent;
+          content: "";
+          position: absolute;
+          top: 1.3em;
+          right: 1em;
+          height: 1em;
+          transform-origin: center;
+          width: 1em;
+        }
+
+        &:hover {
+          color: $secondary-text;
+        }
+
+        &:focus,
+        &:active {
+          background-color: transparent;
+        }
+
+        &.active {
+          color: $secondary-dark;
+          font-weight: $font-bold;
+
+          &.brands-nav-link:after {
+            transform: rotate(180deg);
+          }
+
+          &:hover {
+            color: $secondary-dark;
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    .nav-drawer-detailed-list {
+      border-top: 1px solid $nav-item-border;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .detailed-list-item {
+      border-bottom: 1px solid $nav-item-border-light;
+
+      a {
+        background-color: $nav-drawer-secondary-bg;
+        color: $disabled-text;
+        padding: 1.3em 2em;
+        position: relative;
+        transition: color 0.3s linear;
+
+        &.active {
+          color: $white-text;
+          font-weight: $font-bold;
+
+          &:before {
+            background-color: $white;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 0.1875em;
+          }
+
+          &:hover {
+            color: $white-text;
+            cursor: default;
+          }
+        }
+
+        &:hover {
+          color: $secondary-text;
+        }
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to(small) {
+  div[data-react-class="NavDawer"] {
+    .nav-drawer-container {
+      top: 3.96125em;
+      min-width: 13.45em;
+      will-change: transform;
+    }
+  }
+};
+
+@include respond-to("775px") {
+  div[data-react-class="NavDawer"] {
+    .nav-drawer-container {
+      transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    }
+  }
+};
+
+
+@include respond-to(medium) {
+  div[data-react-class="NavDawer"] {
+    .nav-drawer-container {
+      background-color: transparent;
+      border-top: 1px solid $nav-item-border;
+      display: inline-block;
+      display: flex;
+      flex-flow: row wrap;
+      float: left;
+      height: 100%;
+      max-width: 15.5em;
+      opacity: 1;
+      position: relative;
+      top: -0.0625em;
+      transform: translateX(0);
+      z-index: 0;
+
+      &.outro {
+        transform: translateX(0);
+      }
+
+      .nav-drawer {
+        border-right: 1px solid $primary-dark;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transform: translateX(0);
+        width: 100%;
+      }
+
+      .user-profile {
+        display: none;
+      }
+
+      .filter-item {
+        &:first-of-type .filter-title {
+          border-top: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  user: postgres
+
+test:
+  <<: *default
+  database: pros_test

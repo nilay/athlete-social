@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "text",
+    "created_at",
+    "hashtags",
+    "mentions",
+    "likes",
+    "questioner",
+    "reactions"
+  ],
+  "properties" : {
+    "id" : { "type" : "integer" },
+    "text" : { "type" : "string" },
+    "created_at" : { "type" : "string", "format" : "datetime" },
+    "hashtags" : { "type" : "array" },
+    "mentions" : { "type" : "array",
+                   "items" : { "$ref" : "athlete.json" } },
+    "likes" : { "$ref" : "likes.json" },
+    "questioner" : { "$ref" : "questioner.json" },
+    "reactions": {
+      "type": "array",
+      "items":{ "$ref" : "post_without_reactions.json" }
+    }
+  }
+}

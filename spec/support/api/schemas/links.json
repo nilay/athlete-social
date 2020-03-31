@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": [
+    "next",
+    "previous"
+  ],
+  "properties" : {
+    "next": { "type": ["string", "null"] },
+    "previous": { "type": ["string", "null"] }
+  }
+}

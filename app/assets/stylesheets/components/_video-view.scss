@@ -1,0 +1,54 @@
+.video-wrapper {
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .play-btn,
+  .replay-btn {
+    background:
+      asset-url("icons/play.png")
+      no-repeat
+      center
+      center
+      transparent;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 5em;
+    left: 50%;
+    margin: 0 auto 0 -2.5em;
+    opacity: 1;
+    position: absolute;
+    top: 40%;
+    transition: opacity 300ms linear;
+    visibility: visible;
+    width: 5em;
+    z-index: 9000;
+
+    &.playing {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .replay-btn {
+    background:
+      asset-url("icons/replay.png")
+      no-repeat
+      center
+      center
+      transparent;
+    background-size: contain;
+  }
+
+  .feature-video {
+    background-color: #000;
+    width: 100%;
+  }
+}

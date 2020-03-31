@@ -1,0 +1,154 @@
+.header {
+  align-items: space-between;
+  background-color: $white;
+  border-bottom: 1px solid $border;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &.fixed {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .menu-container {
+    align-items: stretch;
+    display: flex;
+    flex: 0.3 auto;
+    min-width: 2.744375em;
+  }
+
+  .menu-section {
+    align-items: center;
+    background-color: $primary-dark;
+    display: flex;
+    flex: 1 auto;
+    justify-content: space-between;
+    padding: 0 1.1em;
+  }
+
+  // Navicon menu
+  @include navicon;
+
+  .logo {
+    background:
+    asset-url("logo.svg")
+    no-repeat
+    center
+    center
+    transparent;
+    background-size: cover;
+    height: $default-size;
+    width: 3.5em;
+  }
+
+  .user-container {
+    display: none;
+
+    .profile-img-container {
+      border-radius: 50%;
+      margin: 0 0.8em 0 1em;
+      overflow: hidden;
+      max-width: 2em;
+
+      img {
+        background-color: $dashboard-bg-color;
+        width: 100%;
+      }
+    }
+  }
+
+  .logout-container {
+    align-items: center;
+    display: flex;
+    flex: 2 auto;
+    justify-content: flex-end;
+
+    .logout-link {
+      color: $dark-text;
+      font-size: 0.9em;
+      font-weight: $font-regular;
+      padding: 0.9em 1em;
+      text-transform: capitalize;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to(xsmall) {
+  .header {
+    .menu-container {
+      flex: 0.1 auto;
+    }
+  }
+};
+
+@include respond-to("700px") {
+  .header {
+    .user-container {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      flex: 3 auto;
+      flex-flow: row wrap;
+    }
+
+    .profile-img-container {
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      flex: 0.5 0px;
+    }
+
+    .welcome-text {
+      align-self: center;
+      color: $secondary-text;
+      display: flex;
+      flex: 2 0px;
+      font-size: 0$default-size;
+    }
+
+    .logout-container {
+      flex: 1 auto;
+    }
+  }
+};
+
+@include respond-to(small) {
+  .header {
+    .menu-container {
+      flex: 0.2 auto;
+    }
+
+    .menu-section {
+      justify-content: center;
+      padding: 1.1em;
+    }
+
+    .user-container {
+      .profile-img-container {
+        max-width: 2.5em;
+      }
+    }
+
+    .logo {
+      height: 1.2em;
+      width: 4.9em;
+    }
+  }
+};
+
+@include respond-to(medium) {
+  .header {
+    flex: 1 100%;
+  }
+};

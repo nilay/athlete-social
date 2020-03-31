@@ -1,0 +1,10 @@
+---
+:concurrency: <%= ENV['SIDEKIQ_CONCURRENCY'] || '4' %>
+:verbose: false
+:concurrency:  25
+:queues:
+  - [high, 2]
+  - ranking
+  - push_notifications
+  - default
+  - mailers

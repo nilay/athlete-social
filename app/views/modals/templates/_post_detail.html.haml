@@ -1,0 +1,27 @@
+%script{ type: "text/template", id: "postDetail"}
+  .main-content-container
+    .img-container
+      = image_tag "", class: "post-detail-image js-post-detail-image"
+    .footer
+      .img-container
+        = image_tag "", title: "user avatar", class: "js-athlete-avatar"
+      .text-container
+        .username
+        .details-footer
+          .reactions.three
+            %span.dynamic-sub-text.js-total-reactions
+            Reactions
+          .comments.three
+            %span.dynamic-sub-text.js-total-comments
+            Comments
+          .time-posted.three.js-time-posted
+            15 hours ago
+  .footer-container
+    .btn-container.three-btn
+      %a.btn.js-download-item-btn{ href: "", download: "" } download
+    .btn-container.three-btn
+      %button.btn.js-delete-post-btn{ type: "button" } delete
+    .btn-container.three-btn
+      %button.btn.cancel-btn.medium-show-btn.js-close-modal{ type: "button" } close
+  .footer-container.mobile-footer-container
+    %button.btn.cancel-btn.js-close-modal{ type: "button" } close

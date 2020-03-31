@@ -1,0 +1,30 @@
+{
+  "title" : "Athlete Metadata",
+  "type" : "object",
+  "required" : ["metadata"],
+  "properties" : {
+    "metadata" : {
+      "type":"object",
+      "required":[
+        "posts_count",
+        "reactions_count",
+        "followers_count",
+        "follow_count",
+        "questions_asked_count",
+        "questions_answered_count",
+        "liked_posts_count",
+        "liked_questions_count"
+      ],
+      "properties" : {
+        "posts_count" : { "type" : "integer" },
+        "reactions_count" : { "type" : "integer" },
+        "followers_count" : { "type" : "integer" },
+        "follow_count" : { "type" : "integer" },
+        "questions_asked_count" : { "type" : "integer" },
+        "questions_answered_count" : { "type" : "integer" },
+        "liked_posts_count" : { "type" : "integer" },
+        "liked_questions_count" : { "type" : "integer" }
+      }
+    }
+  }
+}

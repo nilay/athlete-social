@@ -1,0 +1,87 @@
+.brands-campaigns-list-container {
+  .wrapper {
+    background-color: $white;
+    border: 1px solid $border;
+    margin-top: 0.2em;
+  }
+
+  .campaign-item {
+    align-items: center;
+    border-bottom: 1px solid $border;
+    display: flex;
+    flex: 1 100%;
+    justify-content: flex-start;
+    padding: 0.5em;
+    position: relative;
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      background-color: $white;
+      bottom: -3px;
+      content: "";
+      display: inline-block;
+      height: 0.3em;
+      left: 0;
+      position: absolute;
+      width: 5.3em;
+    }
+  }
+
+  .img-container {
+    align-items: center;
+    background-color: $dashboard-bg-color;
+    border: 1px solid $border;
+    border-radius: 3px;
+    display: flex;
+    flex: 1 0px;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1em;
+    max-width: 3.83625em;
+
+    img {
+      background:
+        asset-url("icons/img-default.svg")
+        no-repeat
+        center
+        center
+        transparent;
+      background-size: contain;
+    }
+  }
+
+  .text-container {
+    align-items: center;
+    display: flex;
+    flex: 7 0px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding-left: 1em;
+  }
+
+  .title,
+  .date {
+    font-size: $default-size;
+    width: 100%;
+    text-transform: capitalize;
+  }
+
+  .title {
+    font-weight: $font-bold;
+  }
+
+  .date {
+    color: $secondary-text;
+    font-weight: $font-light;
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/

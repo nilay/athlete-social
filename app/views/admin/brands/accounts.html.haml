@@ -1,0 +1,30 @@
+.multi-view-container
+  -# first view
+  .brand-accounts-container
+    = render "shared/search_with_btns", show_btn: false, btn_value: ""
+    = render "shared/notifications"
+
+    .brands-grid-container
+      %ul.brand-list.list
+        -# TODO: make this dynamic
+        %li.brand-list-item.list-item
+          = image_tag "brand-logos/nike.svg", class: "", data:{ brand: "nike", logo: image_path("brand-logos/nike.svg")}
+        %li.brand-list-item.list-item
+          = image_tag "brand-logos/adidas.svg", class: "", data:{ brand: "adidas", logo: image_path("brand-logos/adidas.svg")}
+        %li.brand-list-item.list-item{ data:{ brand: "gatorade" } }
+          = image_tag "brand-logos/gatorade.svg", class: ""
+        %li.brand-list-item.list-item{ data:{ brand: "go-pro" } }
+          = image_tag "brand-logos/go-pro.svg", class: ""
+        %li.brand-list-item.list-item{ data:{ brand: "reebok" } }
+          = image_tag "brand-logos/reebok.svg", class: ""
+        %li.brand-list-item.list-item{ data:{ brand: "under-armour" } }
+          = image_tag "brand-logos/under-armour.svg", class: ""
+        %li.brand-list-item.list-item
+          = image_tag "brand-logos/nike.svg", class: "", data:{ brand: "nike", logo: image_path("brand-logos/nike.svg")}
+        %li.brand-list-item.list-item
+          = image_tag "brand-logos/adidas.svg", class: "", data:{ brand: "adidas", logo: image_path("brand-logos/adidas.svg")}
+        %li.brand-list-item.list-item{ data:{ brand: "gatorade" } }
+          = image_tag "brand-logos/gatorade.svg", class: ""
+
+  -# second view
+  = render "shared/admin/brands_accounts_details"

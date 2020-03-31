@@ -1,0 +1,5 @@
+-# requires "btn_value", "title", "modal" params
+
+.search-container
+  %input.search-box{ type: "search", results: "10", name: "s", placeholder: "Search all questions..." }
+  %button.btn.light-text{ type: "button", value: "create question", data:{ uid: "#{ current_user.id }", type: get_current_user_type(current_user), modal:{ target: modal, title: title } } } #{ btn_value }

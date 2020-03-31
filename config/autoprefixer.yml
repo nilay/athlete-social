@@ -1,0 +1,9 @@
+browsers:
+  - "IE >= 10"
+  - "Edge >= 12"
+  - "Firefox >= 28"
+  - "Chrome >= 21"
+  - "Safari >= 6.1"
+  - "Opera >= 12.1"
+  - "iOS >= 7.1"
+  - "ChromeAndroid >= 35"

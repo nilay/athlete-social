@@ -1,0 +1,22 @@
+.search-with-btns-container {
+  @extend .search-container;
+
+  .btn-container {
+    display: none;
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  .search-with-btns-container {
+    padding: 0.6em 0.7em;
+
+    .btn-container,
+    .request-btn {
+      display: block;
+    }
+  }
+};

@@ -1,0 +1,20 @@
+{
+  "title" : "Fan Metadata",
+  "type" : "object",
+  "required" : ["metadata"],
+  "properties" : {
+    "metadata" : {
+      "type":"object",
+      "required":[
+        "follow_count",
+        "liked_posts_count",
+        "liked_questions_count"
+      ],
+      "properties" : {
+        "follow_count" : { "type" : "integer" },
+        "liked_posts_count" : { "type" : "integer" },
+        "liked_questions_count" : { "type" : "integer" }
+      }
+    }
+  }
+}

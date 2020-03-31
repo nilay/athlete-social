@@ -1,0 +1,80 @@
+/*======================================
+                THEME
+======================================*/
+// BASICS
+$white: #fff;
+$dark: #343434;
+
+$primary: #4E5057;
+$primary-light: #898A8F;
+$primary-dark: #14161F;
+$secondary: #3FD6AE;
+$secondary-light: #7FE4C9;
+$secondary-dark: #00C994;
+$accent: #FFAB00;
+
+$border: #D8D8D8;
+$dark-border: #CBCBCB;
+
+$white-text: $white;
+$dark-text: $dark;
+$secondary-text: #9C9C9C;
+
+// Notifications
+$success: #23C46A;
+$warning: #EFC663;
+$danger: #CC3E4A;
+$pending: #9677DF;
+
+/*======================================
+                 TEXT
+======================================*/
+$font-helvetica: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+$font-body: $font-helvetica;
+
+$font-light: 100;
+$font-regular: 400;
+$font-bold: 700;
+$font-bolder: 800;
+$font-black: 900;
+
+$default-size: 0.875em;
+
+// ELEMENTS
+$placeholder-text: #ACACAC;
+$nav-drawer-text: $white-text;
+$disabled-text: $primary;
+
+
+/*======================================
+               ELEMENTS
+======================================*/
+$dashboard-bg-color: #ECECEC;
+
+$nav-drawer-bg: $primary-dark;
+$nav-drawer-secondary-bg: darken($primary-dark, 5);
+$nav-item-border: darken($primary-dark, 10);
+$nav-item-border-light: rgba($primary, 0.2);
+
+$dropdown-bg-color: #EAEAEA;
+$modal-overlay: rgba($primary, 0.8);
+
+$toggle-on-bg: $success;
+$toggle-off-bg: $primary-light;
+
+
+
+/*======================================
+              DIMENSIONS
+======================================*/
+$breakpoint-xsmall: 320px;
+$breakpoint-small: 768px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1280px;
+$breakpoint-xlarge: 1430px;
+
+// ELEMENTS
+$max-btn-width: 15em;
+$border-radius: 0.0625em;
+
+$transform-transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);

@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "required": ["links", "athletes"],
+  "properties": {
+    "links" : {
+      "type" : "object",
+      "items" : { "$ref" : "links.json"}
+    },
+    "athletes": {
+      "type": "array",
+      "items":{ "$ref" : "athlete_with_following.json" }
+    }
+  }
+}

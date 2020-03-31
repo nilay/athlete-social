@@ -1,0 +1,16 @@
+{
+  "title" : "Questioner",
+  "type" : "object",
+  "required" : [
+    "id",
+    "name",
+    "type",
+    "avatar"
+  ],
+  "properties" : {
+    "id" : { "type" : "integer" },
+    "last_name" : { "type" : "string" },
+    "type" : { "type" : "string" },
+    "avatar" : { "$ref" : "avatar.json" }
+  }
+}

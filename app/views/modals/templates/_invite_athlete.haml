@@ -1,0 +1,6 @@
+%script{ type: "text/template", id: "inviteAthlete"}
+  = form_tag(send_invite_api_v1_users_path, method: :post, id: "inviteAthleteForm", class: "invite-athlete") do
+    = email_field_tag('email', nil, placeholder: 'email@example.com', required: "required", class: "form-input border-input js-athlete-email")
+    .footer-container
+      %button.btn.primary-btn.js-invite-athlete{ type: "submit" } send invitation
+      %button.btn.cancel-btn.js-close-modal{ type: "button" } cancel

@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": [
+    "count",
+    "liked_by_current_user"
+  ],
+  "properties" : {
+    "count": { "type": "integer" },
+    "liked_by_current_user": { "type": "boolean" }
+  }
+}

@@ -1,0 +1,24 @@
+addons:
+  postgresql: "9.4"
+language: ruby
+rvm: 2.3.1
+cache: bundler
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c "create database pros_test;" -U postgres
+  - mkdir -p tmp/cache
+script: xvfb-run -a bundle exec rspec
+services:
+  - redis-server
+env:
+  -AWS_S3_BUCKET=pros-staging
+  -AWS_REGION=us-east-1
+  -AWS_ACCESS_KEY_ID=OU812
+  -AWS_SECRET_ACCESS_KEY=ABCDE
+  -AWS_VERIFICATION_URL=http://169.254.169.254/latest/meta-data/iam/security-credentials/
+  -DEEP_LINK=Pros-testing
+  -DOMAIN=http://lvh.me:3000
+  -TELESTREAM_ACCESS_KEY=lmnop
+  -TELESTREAM_SECRET_KEY=mrnotducksosar
+  -TELESTREAM_API_URL=api-gce.pandastream.com
+  -TELESTREAM_FACTORY_ID=osmrduckscmwangs

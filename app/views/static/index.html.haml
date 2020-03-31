@@ -1,0 +1,136 @@
+#home
+  %header#top.clearfix
+    #nav-top.container
+      %ul.nav.nav-pills
+        %li.active=link_to "Features", root_path
+        %li=link_to "Legal", legal_path
+        %li=mail_to "hello@theprosapp.com", "Contact Us"
+    #nav-scrolled.container-fluid.no-gutter
+      .col-sm-4
+        %button#toggle-on.toggle-button.btn.btn-primary.btn-lg{"aria-pressed" => "false", :autocomplete => "off", "data-toggle" => "button", :type => "button"}
+          %img{:src => image_path("static/menu.png")}
+        %h1
+          =link_to root_path do
+            %img.img-responsive.svg{:alt => "Pros", :src => image_path("static/pros.svg")}
+      .col-sm-8.text-right.hidden-xs
+        %ul.nav.navbar-nav
+          %li=link_to "Get The App", ENV["APPLE_APP_STORE"], {class: 'btn text-center'}
+  .container
+    #intro.row
+      .col-sm-4.col-sm-offset-1
+        %h1.hidden-xs
+          %img.img-responsive{:alt => "Pros", :src => image_path("static/pros.svg")}
+        %p.lead.text-center Welcome to The Pros App.  A platform bringing fans closer to the athletes they love. We put you directly in the locker room and behind the scenes with professional athletes around the world. Unfiltered and unscripted.
+        %p.lead.text-center Made by Athletes, enjoyed by you.
+        %p.text-center=link_to "Get The App", ENV["APPLE_APP_STORE"], {class: 'btn text-center'}
+      .col-sm-5.col-sm-offset-2.text-center
+        %img.img-responsive{:src => image_path("static/phone.png")}
+    #place.row
+      %h2.text-center
+        A place for
+        %strong Pros
+        to connect with
+        %strong Pros
+      .col-sm-5
+        %img.img-responsive{:src => image_path("static/place.png")}
+      .col-sm-6.hidden-xs
+        %h3 Videos & Photos
+        %p See what videos and photos your favorite professional athletes are sharing behind the scenes, from the locker room, and in their downtime.
+        %h3 Reactions
+        %p Thought Tyler Seguin's goal was sweet? See what Vernon Wells thinks about it!  Watch how competition translates from on the field to off the field.
+        %h3 Comments
+        %p Wondering what happened when Michael Young and Chris Iannetta exchanged heated words? See unfiltered comments from real pros.
+      .visible-xs
+        #placeCarousel.carousel.slide.carousel-fade{"data-ride" => "carousel"}
+          .carousel-inner{:role => "listbox"}
+            .item.active
+              %h3 Videos & Photos
+              %p See what videos and photos your favorite professional athletes are sharing behind the scenes, from the locker room, and in their downtime.
+            .item
+              %h3 Reactions
+              %p Thought Tyler Seguin's goal was sweet? See what Vernon Wells thinks about it!  Watch how competition translates from on the field to off the field.
+            .item
+              %h3 Comments
+              %p Wondering what happened when Michael Young and Chris Iannetta exchanged heated words? See unfiltered comments from real pros.
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#placeCarousel"}
+            %li{"data-slide-to" => "1", "data-target" => "#placeCarousel"}
+            %li{"data-slide-to" => "2", "data-target" => "#placeCarousel"}
+    #interact.row
+      %h2.text-center
+        A new way to interact with
+        %strong Pros
+      .col-sm-6.hidden-xs
+        %h3 Questions and Answers
+        %p Ever wondered what athletes ask other athletes behind the scenes? Unfiltered, unscripted, without the noise.  See what real pros have to say.
+        %h3 Explore
+        %p Find and follow your favorite athlete or discover the next superstar.
+      .col-sm-6.text-right
+        %p
+          %img{:src => image_path("static/interact.png")}
+      .visible-xs
+        #interactCarousel.carousel.slide.carousel-fade{"data-ride" => "carousel"}
+          .carousel-inner{:role => "listbox"}
+            .item.active
+              %h3 Questions and Answers
+              %p Ever wondered what athletes ask other athletes behind the scenes? Unfiltered, unscripted, without the noise.  See what real pros have to say.
+            .item
+              %h3 Explore
+              %p Find and follow your favorite athlete or discover the next superstar.
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#interactCarousel"}
+            %li{"data-slide-to" => "1", "data-target" => "#interactCarousel"}
+            %li{"data-slide-to" => "2", "data-target" => "#interactCarousel"}
+    #know.row
+      #myCarousel.carousel.slide.carousel-fade{"data-interval" => "3000", "data-pause" => "false", "data-ride" => "carousel"}
+        / Wrapper for slides
+        .carousel-inner{:role => "listbox"}
+          .item.active
+            %img{:alt => "", :src => image_path("static/bg-bubble1.png")}
+          .item
+            %img{:alt => "", :src => image_path("static/bg-bubble2.png")}
+          .item
+            %img{:alt => "", :src => image_path("static/bg-bubble3.png")}
+          .item
+            %img{:alt => "", :src => image_path("static/bg-bubble4.png")}
+          .item
+            %img{:alt => "", :src => image_path("static/bg-bubble5.png")}
+        / Indicators
+        .row
+          .col-sm-11
+            %h2.text-right
+              %strong Pros
+              that you know
+        %ol.carousel-indicators
+          %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+            %img{:src => image_path("static/bubble1.png")}
+          %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+            %img{:src => image_path("static/bubble2.png")}
+          %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+            %img{:src => image_path("static/bubble3.png")}
+          %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
+            %img{:src => image_path("static/bubble4.png")}
+          %li{"data-slide-to" => "4", "data-target" => "#myCarousel"}
+            %img{:src => image_path("static/bubble5.png")}
+      %h2.text-center.border
+        Made by athletes,
+        %strong enjoyed
+        by you
+      %p.text-center=link_to "Get It In The App Store", ENV["APPLE_APP_STORE"], {class: 'btn'}
+    %footer
+      .container
+        %ul.nav.navbar-nav
+          %li=link_to "Terms of Service", tos_path
+          %li=mail_to "hello@theprosapp.com", "Contact Us"
+  / /.container
+  #sidr
+    %nav#navbar-main{:role => "navigation"}
+      %header.clearfix
+        %button#toggle-off.toggle-button.btn.btn-primary.btn-lg{"aria-pressed" => "false", :autocomplete => "off", "data-toggle" => "button", :type => "button"}
+          %img{:src => image_path("static/menu-dark.png")}
+        %a{:href => "/"}
+          %img.img-responsive.svg{:alt => "Pros", :src => image_path("static/pros-dark.svg")}
+      %ul.nav.nav-pills.nav-stacked
+        %li.active=link_to "Features", root_path
+        %li=link_to "Legal", legal_path
+        %li=mail_to "hello@theprosapp.com", "Contact Us"

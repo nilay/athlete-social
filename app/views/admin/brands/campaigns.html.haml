@@ -1,0 +1,51 @@
+.brands-campaign-container
+  .search-container
+    %select.drop-down{ name: "select" }
+      %option{ value: "most_recent", selected: "" } Most recent
+    %input.search-box{ type: "search", results: "10", name: "s", placeholder: "Search all campaigns..." }
+    .btn-container
+      %button.grid-btn{ type: "button" }
+      %button.list-btn{ type: "button" }
+
+  -# TODO: make this dynamic
+  .notification-container
+    %span.notification-msg= truncate "You have 4 notifications, sucka", length: 34, seperator: " "
+    %button.btn.light-text.request-btn{ type: "button", value: "view request"} view campaigns
+
+  .campaign-grid-container
+    %ul.campaign-list
+      -# TODO: make this dynamic
+      %li.campaign-list-item
+        .list-img-container
+          = image_tag "icons/img-default.svg", alt: "campaign img"
+        .list-info
+          .title Campaign Title Goes Here
+          .date Feb 2 - Mar 2
+
+      %li.campaign-list-item
+        .list-img-container
+          = image_tag "icons/img-default.svg", alt: "campaign img"
+        .list-info
+          .title Campaign Title Goes Here
+          .date Feb 2 - Mar 2
+
+      %li.campaign-list-item
+        .list-img-container
+          = image_tag "icons/img-default.svg", alt: "campaign img"
+        .list-info
+          .title Campaign Title Goes Here
+          .date Feb 2 - Mar 2
+
+      %li.campaign-list-item
+        .list-img-container
+          = image_tag "icons/img-default.svg", alt: "campaign img"
+        .list-info
+          .title Campaign Title Goes Here
+          .date Feb 2 - Mar 2
+
+      %li.campaign-list-item
+        .list-img-container
+          = image_tag "icons/img-default.svg", alt: "campaign img"
+        .list-info
+          .title Campaign Title Goes Here
+          .date Feb 2 - Mar 2

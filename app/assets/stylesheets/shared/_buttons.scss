@@ -1,0 +1,162 @@
+.btn {
+  appearance: none;
+  background-color: $secondary-dark;
+  border: none;
+  border-radius: $border-radius;
+  color: $dark-text;
+  display: inline-block;
+  font-weight: $font-bold;
+  letter-spacing: 0.03em;
+  margin: 1em auto;
+  padding: 0.8em;
+  position: relative;
+  text-align: center;
+  text-transform: capitalize;
+  transition:
+    background-color 0.2s linear,
+    color 100ms linear;
+  width: 100%;
+
+  &:hover {
+    color: $primary-dark;
+    background-color: $primary-light;
+  }
+
+  &.disabled {
+    background-color: $disabled-text;
+    color: $white-text;
+    cursor: default;
+    opacity: 0.2;
+
+    &:hover {
+      background-color: $disabled-text;
+    }
+  }
+}
+
+.simple-btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.trash-btn {
+  @extend .btn;
+  background:
+    asset-url("icons/trash.svg")
+    no-repeat
+    center
+    center
+    transparent;
+  background-size: 0.8em;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0.8em;
+  transition: border 200ms ease-out;
+  width: 1em;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $danger;
+  }
+}
+
+.cancel-btn {
+  color: $secondary-light;
+  background-color: $primary;
+
+  &:hover {
+    background-color: darken($primary, 10);
+  }
+}
+
+.active-btn {
+  background-color: $success;
+}
+
+.non-active-btn {
+  color: $secondary;
+  background-color: $dark-text;
+}
+
+.deactivate-btn {
+  color: $white-text;
+  background-color: $dark-text;
+
+  &:hover {
+    color: $secondary;
+    background-color: darken($dark-text, 10);
+  }
+}
+
+.delete-btn {
+  color: $white-text;
+  background-color: $danger;
+
+  &:hover {
+    background-color: darken($danger, 0.5);
+  }
+}
+
+.grid-btn,
+.list-btn {
+  border: 1px solid $border;
+  margin-left: 0.5em;
+  padding: 1.2em;
+
+  &:hover {
+    background-color: $secondary-dark;
+  }
+}
+
+.grid-btn {
+  background:
+    asset-url("icons/view-grid.svg")
+    no-repeat
+    center
+    center
+    transparent;
+}
+
+.list-btn {
+  background:
+    asset-url("icons/view-list.svg")
+    no-repeat
+    center
+    center
+    transparent;
+}
+
+.light-text {
+  @extend .btn;
+  font-weight: $font-regular;
+}
+
+
+.pill {
+  background-color: transparent;
+  border: none;
+  border-radius: $border-radius;
+  color: $primary-light;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $default-size;
+  font-weight: $font-regular;
+  margin-right: 1em;
+  max-width: 6em;
+  padding: 0.5em;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darken($dashboard-bg-color, 5);
+    color: $primary-light;
+  }
+
+  &.active {
+    background-color: $secondary-dark;
+    color: $white-text;
+    cursor: default;
+  }
+}

@@ -1,0 +1,18 @@
+// causes element to break at all resolutions above breakpoint
+@mixin break_at($breakpoint) {
+  display: inline;
+
+  @include respond-to($breakpoint) {
+    display: block;
+  }
+}
+
+
+// causes element to break at all resolutions below breakpoint
+@mixin break_until($breakpoint) {
+  display: block;
+
+  @include respond-to($breakpoint) {
+    display: inline;
+  }
+}

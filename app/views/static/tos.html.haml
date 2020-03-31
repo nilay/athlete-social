@@ -1,0 +1,55 @@
+:css
+  .iub_header h1 { width: 100% !important; }
+
+-if params['nav'] == '0'
+  .container
+    .row
+      .col-xs-12
+        =link_to "Back to Legal Index", legal_path(nav: 0), {style: "margin-top:20px; display:block;"}
+        %h2{style: "margin-top:20px"} Privacy Policy
+        %a.iubenda-white.no-brand.iub-body-embed.iubenda-embed{:href => "https://www.iubenda.com/privacy-policy/7826625", :title => "Privacy Policy"} Privacy Policy
+        :javascript
+          (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
+
+-else
+  #static-interior
+    %header#top.clearfix
+      #nav-top.container
+        %ul.nav.nav-pills
+          %li=link_to "Features", root_path
+          %li.active=link_to "Legal", legal_path
+          %li=mail_to "hello@theprosapp.com", "Contact Us"
+      #nav-scrolled.container-fluid.no-gutter
+        .col-sm-4
+          %button#toggle-on.toggle-button.btn.btn-primary.btn-lg{"aria-pressed" => "false", :autocomplete => "off", "data-toggle" => "button", :type => "button"}
+            %img{:src => image_path("static/menu.png")}
+          %h1
+            =link_to root_path do
+              %img.img-responsive.svg{:alt => "Pros", :src => image_path("static/pros.svg")}
+        .col-sm-8.text-right.hidden-xs
+          %ul.nav.navbar-nav
+            %li=link_to "Get The App", ENV["APPLE_APP_STORE"], {class: 'btn text-center'}
+    .container
+      .row
+        .col-xs-12
+          %h2 Privacy Policy
+          %a.iubenda-white.no-brand.iub-body-embed.iubenda-embed{:href => "https://www.iubenda.com/privacy-policy/7826625", :title => "Privacy Policy"} Privacy Policy
+          :javascript
+            (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
+      %footer
+        .container
+          %ul.nav.navbar-nav
+            %li=mail_to "hello@theprosapp.com", "Contact Us"
+            %li=link_to "Terms of Service", tos_path
+    / /.container
+    #sidr
+      %nav#navbar-main{:role => "navigation"}
+        %header.clearfix
+          %button#toggle-off.toggle-button.btn.btn-primary.btn-lg{"aria-pressed" => "false", :autocomplete => "off", "data-toggle" => "button", :type => "button"}
+            %img{:src => image_path("static/menu-dark.png")}
+          =link_to root_path do
+            %img.img-responsive.svg{:alt => "Pros", :src => image_path("static/pros-dark.svg")}
+        %ul.nav.nav-pills.nav-stacked
+          %li=link_to "Features", root_path
+          %li.active=link_to "Legal", legal_path
+          %li=mail_to "hello@theprosapp.com", "Contact Us"

@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": [
+    "question",
+    "reaction"
+  ],
+  "properties" : {
+    "question": { "$ref" : "question.json" },
+    "reaction": { "$ref" : "post_without_reactions.json" }
+  }
+}

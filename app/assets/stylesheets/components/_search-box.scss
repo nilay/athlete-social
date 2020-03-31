@@ -1,0 +1,89 @@
+.search-container {
+  display: flex;
+  flex: 1 100%;
+  flex-flow: row wrap;
+  padding: 0.6em 0.6em 0 0.6em;
+
+  .drop-down,
+  .search-box,
+  .btn {
+    max-width: none;
+    width: auto;
+  }
+
+  .drop-down,
+  .search-box {
+    border: 1px solid $border;
+    display: flex;
+    flex: 1 100%;
+  }
+
+  .drop-down {
+    margin: 0;
+  }
+
+  .search-box {
+    margin-top: 0.2em;
+  }
+
+  .btn {
+    padding: 0.7em;
+    width: 100%;
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  .search-container {
+    background-color: $white;
+    border: 1px solid $border;
+    flex: 1 100%;
+    padding: 0 0.7em;
+    margin: 0.6em 0.6em 0 0.6em;
+    justify-content: space-between;
+
+    .drop-down,
+    .search-box,
+    .btn {
+      align-self: center;
+      flex-direction: column;
+    }
+
+    .drop-down {
+      flex: 1 0px;
+      margin-right: 1em;
+    }
+
+    .search-box {
+      border: none;
+      flex: 3 0px;
+      margin: 0 1em 0 0;
+    }
+
+    .btn {
+      align-items: center;
+      display: flex;
+      flex: 2 0px;
+      justify-content: center;
+      margin: 0.7em auto;
+      width: auto;
+      max-width: 13em;
+    }
+  }
+};
+
+
+@include respond-to(medium) {
+  .search-container {
+    .search-box {
+      margin-right: 11em;
+    }
+
+    .btn {
+      flex: 1.5 0px;
+    }
+  }
+};

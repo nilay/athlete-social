@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": [
+    "post",
+    "reaction"
+  ],
+  "properties" : {
+    "post": { "$ref" : "post.json" },
+    "reaction": { "$ref" : "post_without_reactions.json" }
+  }
+}

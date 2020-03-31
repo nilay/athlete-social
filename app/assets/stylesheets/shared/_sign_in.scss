@@ -1,0 +1,30 @@
+.log-in-form {
+  .forgot-password-container {
+    padding-top: 1em;
+  }
+
+  .forgot-password-text,
+  .form-check-label-text {
+    color: $white-text;
+    font-weight: $font-light;
+  }
+
+  .forgot-password-text {
+    text-align: center;
+  }
+
+  .session_username .form-input {
+    border-bottom: none;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+
+  .form-input.password {
+    border-radius: 0 0 $border-radius $border-radius;
+    border-top: 1px solid $border;
+    margin-top: 0;
+  }
+
+  .form-actions-container {
+    margin-top: 0.4em;
+  }
+}

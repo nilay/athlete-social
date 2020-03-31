@@ -1,0 +1,72 @@
+// Responsive breakpoints
+//
+// Example usage:
+//
+//   @include respond-to(medium) {
+//     styles for medium and larger
+//   }
+
+//   @include respond-to(small, medium) {
+//     between small and medium
+//   }
+
+//   @include respond-to(320px, 600px) {
+//     between random values
+//   }
+
+@mixin respond-to($min: "", $max: "") {
+  $min-width: $min;
+  $max-width: $max;
+
+  @if $min != "" {
+    $min-width: $min;
+
+    @if $min == xsmall {
+      $min-width: $breakpoint-xsmall;
+    }
+    @else if $min == small {
+      $min-width: $breakpoint-small;
+    }
+    @else if $min == medium {
+      $min-width: $breakpoint-medium; // tablet
+    }
+    @else if $min == large {
+      $min-width: $breakpoint-large; //tablet-landscape, desktop
+    }
+    @else if $min == xlarge {
+      $min-width: $breakpoint-xlarge; //tablet-landscape, desktop
+    }
+  }
+
+  @if $max != "" {
+    $max-width: $max - 1;
+
+    @if $max == xsmall {
+      $max-width: $breakpoint-xsmall;
+    }
+    @else if $max == small {
+      $max-width: $breakpoint-small - 1;
+    }
+    @else if $max == medium {
+      $max-width: $breakpoint-medium - 1; // tablet
+    }
+    @else if $max == large {
+      $max-width: $breakpoint-large - 1; //tablet-landscape, desktop
+    }
+    @else if $max == xlarge {
+      $max-width: $breakpoint-xlarge - 1; //tablet-landscape, desktop
+    }
+  }
+
+  @if($min-width != "" and $max-width != "") { // both min and max specified as parameters
+    @media only screen and (min-width: $min-width) and (max-width: $max-width) { @content; }
+  }
+
+  @else if($min-width != "") { // max not defined, just do min
+    @media only screen and (min-width: $min-width) { @content; }
+  }
+
+  @else if($max-width != "") { // just set min width
+    @media only screen and (max-width: $max-width) { @content; }
+  }
+}

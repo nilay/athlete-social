@@ -1,0 +1,164 @@
+tyler_seguin:
+  first_name: "Tyler"
+  last_name: "Seguin"
+  email: "mts6152011@hotmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Tyler_Seguin_-_Dallas_Stars.jpg/932px-Tyler_Seguin_-_Dallas_Stars.jpg"
+michael_young:
+  first_name: "Michael"
+  last_name: "Young"
+  email: "mikey2young@yahoo.com"
+  avatar: "https://c2.staticflickr.com/4/3322/3481703319_61a1b9b0c5_b.jpg"
+vernon_wells:
+  first_name: "Vernon"
+  last_name: "Wells"
+  email: "vernonw3@mac.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/0/08/Vernon_Wells_with_sunglasses_and_glove.jpg"
+torii_hunter:
+  first_name: "Torii"
+  last_name: "Hunter"
+  email: "tnutts48@aol.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Torii_Hunter_(15424369212).jpg"
+chris_ianetta:
+  first_name: "Chris"
+  last_name: "Ianetta"
+  email: "chrisiannetta@gmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Chris_Iannetta_(17575026429).jpg"
+aaron_hill:
+  first_name: "Aaron"
+  last_name: "Hill"
+  email: "Ahlsutiger@yahoo.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/6/66/AARON_HILL.jpg"
+austin_jackson:
+  first_name: "Austin"
+  last_name: "Jackson"
+  email: "Ajackson853@gmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Austin_jackson_2014.jpg"
+darren_oliver:
+  first_name: "Darren"
+  last_name: "Oliver"
+  email: "Brockmaxwell33@yahoo.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/4/46/Darren_Oliver.jpg"
+dan_haren:
+  first_name: "Dan"
+  last_name: "Haren"
+  email: "Dharen80@yahoo.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Dan_Haren_on_September_16,_2011_(1).jpg"
+dallas_keuchel:
+  first_name: "Dallas"
+  last_name: "Keuchel"
+  email: "Dkeuchel29@gmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/6/61/Dallas_Keuchel_on_August_25,_2015.jpg"
+elvis_andrus:
+  first_name: "Elvis"
+  last_name: "Andrus"
+  email: "Elvis_andrus1@hotmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/8/86/ElvisAndrus.jpg"
+garrett_richards:
+  first_name: "Garrett"
+  last_name: "Richards"
+  email: "Garrettrichards88@yahoo.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/a/af/Garrett_Richards_on_May_17,_2015.jpg"
+howard_kendrick:
+  first_name: "Howard"
+  last_name: "Kendrick"
+  email: "Howard_kndrck@yahoo.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/a/af/Garrett_Richards_on_May_17,_2015.jpg"
+ryan_palmer:
+  first_name: "Ryan"
+  last_name: "Palmer"
+  email: "Hunterpalmer76@gmail.com"
+josh_donaldson:
+  first_name: "Josh"
+  last_name: "Donaldson"
+  email: "Jadonaldson44@gmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/c/cc/Josh_Donaldson.jpg"
+ken_griffey_jr:
+  first_name: "Ken"
+  last_name: "Griffey Jr."
+  email: "Junior@swingman.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/1/19/Ken_Griffey,_Jr._June_2009.jpg"
+justin_upton:
+  first_name: "Justin"
+  last_name: "Upton"
+  email: "Jupton10@gmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Justin_Upton_Braves_vs_Rangers_Sept_2014.jpg"
+justin_verlander:
+  first_name: "Justin"
+  last_name: "Verlander"
+  email: "Kyjoab244@gmail.com"
+  avatar: "https://c1.staticflickr.com/7/6217/6224382187_5f37875233_b.jpg"
+mike_napoli:
+  first_name: "Mike"
+  last_name: "Napoli"
+  email: "Mikenapolisox12@gmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Mike_Napoli_on_May_10,_2012.jpg/957px-Mike_Napoli_on_May_10,_2012.jpg"
+travis_snider:
+  first_name: "Travis"
+  last_name: "Snider"
+  email: "Tsnider15@yahoo.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/5/59/Travis_Snider_jogging.jpg"
+jose_bautista:
+  first_name: "Jose"
+  last_name: "Bautista"
+  email: "bautista19@yahoo.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/1/19/Jose_Bautista_on_September_30,_2015.png"
+curtis_granderson:
+  first_name: "Curtis"
+  last_name: "Granderson"
+  email: "cgrand1@hotmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Curtis_Granderson_2011.jpg"
+derek_holland:
+  first_name: "Derek"
+  last_name: "Holland"
+  email: "dholland1945@hotmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/8/84/Derek_Holland_on_April_10,_2011.jpg"
+travis_hafner:
+  first_name: "Travis"
+  last_name: "Hafner"
+  email: "hafner54@msn.com"
+  avatar: "https://c1.staticflickr.com/7/6025/5947483811_8f3555d4dd_b.jpg"
+hank_conger:
+  first_name: "Hank"
+  last_name: "Conger"
+  email: "hconger35@gmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/e/e6/20110917-1504_Hank_Conger.jpg"
+kevin_millar:
+  first_name: "Kevin"
+  last_name: "Millar"
+  email: "hits415@gmail.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Kevin_Millar_by_Keith_Allison_2.jpg"
+eric_hosmer:
+  first_name: "Eric"
+  last_name: "Hosmer"
+  email: "hosmer20@aol.com"
+  avatar: "https://c1.staticflickr.com/3/2031/5756829355_8c238477ab_b.jpg"
+ian_kinsler:
+  first_name: "Ian"
+  last_name: "Kinsler"
+  email: "i.kinsler5@yahoo.com"
+  avatar: "https://c2.staticflickr.com/4/3591/3482521520_fa49bd81ce_b.jpg"
+jared_weaver:
+  first_name: "Jared"
+  last_name: "Weaver"
+  email: "ithrow87@yahoo.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jered_Weaver_on_June_27,_2012.jpg"
+mike_troutt:
+  first_name: "Mike"
+  last_name: "Trout"
+  email: "jmt35@aol.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Los_Angeles_Angels_center_fielder_Mike_Trout_(27)_(5971760364).jpg"
+j_p_arencibia:
+  first_name: "J.P."
+  last_name: "Arencibia"
+  email: "jparencibia44@gmail.com"
+  avatar: "https://c1.staticflickr.com/7/6183/6101895814_3370dd9030_b.jpg"
+mark_trumbo:
+  first_name: "Mark"
+  last_name: "Trumbo"
+  email: "mtrumbo25@yahoo.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Mark_Trumbo_on_July_22,_2011.jpg"
+lyle_overbay:
+  first_name: "Lyle"
+  last_name: "Overbay"
+  email: "overbaylsaa@mac.com"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Lyle_Overbay_on_May_20,_2013.jpg"

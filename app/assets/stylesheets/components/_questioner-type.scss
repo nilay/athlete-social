@@ -1,0 +1,9 @@
+div[data-react-class="QuestionView"] {
+  .questioner-type {
+    color: $secondary-text;
+    display: flex;
+    flex: 1 0px;
+    font-size: $default-size;
+    text-transform: capitalize;
+  }
+}

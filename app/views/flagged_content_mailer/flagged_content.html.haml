@@ -1,0 +1,38 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Penalty Flag!
+  /
+  %body{:style => "background: #ebeced;"}
+    %table{:align => "center", :bgcolor => "#ebebeb", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "530px"}
+      %tr
+        %td{:align => "center", :valign => "top"}
+          %img{:border => "0", :height => "76px;", :src => "http://pros-production.s3.amazonaws.com/generic_header.png", :width => "530px"}
+      %tr
+        %td
+          %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+            %tr
+              %td{:height => "75px", :style => "background-color: #ebeced;", :width => "15px"}
+              %td{:style => "background-color: white;", :width => "500px"}
+                %p{:style => "font-family: arial; font-size: 24px; font-weight: bold; text-align: center; padding-top: 25px;"} Flag on the Play!
+              %td{:height => "75px", :style => "background-color: #ebeced;", :width => "15px"}
+      %tr
+        %td{:align => "center", :valign => "top"}
+          %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+            %tr
+              %td{:height => "125px", :style => "background-color: #ebeced;", :width => "15px"}
+              %td{:style => "background-color: white;"}
+                %p{:style => "font-family: arial; color: #14161f; background-color:white; text-align: left; padding-left: 40px; padding-right: 25px; line-height: 30px; font-size: 18px;"}
+                  Dear
+                  = succeed "," do
+                    %span{:style => "color: #50e3c2"} Admin
+                %p{:style => "font-family: arial; color: #14161f; background-color:white; text-align: left; padding-left: 40px; padding-right: 40px; line-height: 30px; font-size: 18px;"}
+                  A piece of content has been flagged as inappropriate or objectionable.  Please visit the admin dashboard at #{link_to "the Pros App", "#{ENV['DOMAIN']}/admin/posts"} to review and determine if the content is objectionable.  If the content is objectionable, please also deactivate the Account responsible for generating the objectionable content.
+                %p{:style => "font-family: arial; color: #14161f; background-color:white; text-align: left; padding-left: 40px; padding-right: 25px; line-height: 30px; font-size: 18px;"}
+                  Sincerely,
+                  The Pros App Team
+              %td{:height => "125px", :style => "background-color: #ebeced;", :width => "15px"}
+      %tr
+        %td{:align => "center", :valign => "top"}
+          %img{:border => "0", :height => "153;", :src => "http://pros-production.s3.amazonaws.com/email_footer.png", :width => "530"}

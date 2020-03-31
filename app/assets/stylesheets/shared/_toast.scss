@@ -1,0 +1,56 @@
+.toast-container {
+  background-color: $primary;
+  border-radius: $border-radius;
+  bottom: -5em;
+  left: 1em;
+  margin: 0 auto;
+  min-width: 13em;
+  padding: 1em 2em;
+  position: fixed;
+  transition: transform 0.08s ease-in-out, opacity 0.08s ease-in-out;
+  transform: translateY(0%);
+  width: 90%;
+  z-index: 9999;
+
+  &.active {
+    transform: translateY(-200%);
+  }
+
+  &.error {
+    background-color: $danger;
+  }
+
+  .toast-msg {
+    color: $white-text;
+    display: inline-block;
+    letter-spacing: 0.02em;
+    font-size: $default-size;
+    font-weight: $font-light;
+  }
+
+  .undo-link-container {
+
+    .undo-link {
+      color: $secondary-light;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: $font-bold;
+      margin-left: 0.5em;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $primary-dark;
+      }
+    }
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to(small) {
+  .toast-container {
+    width: auto;
+  }
+};

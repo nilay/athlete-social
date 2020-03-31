@@ -1,0 +1,8 @@
+div[data-react-class="QuestionView"] {
+  .question-time {
+    align-self: flex-end;
+    display: flex;
+    font-size: .75em;
+    font-weight: $font-bold;
+  }
+}

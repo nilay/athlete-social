@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties" : {
+    "mobile_url": { "type": ["string", "null"] },
+    "intro_url": { "type": ["string", "null"] },
+    "share_url": { "type": ["string", "null"] },
+    "thumbnail_url" : { "type" : [ "string", "null"] },
+    "medium_url" : { "type" : [ "string", "null"] },
+    "large_url" : { "type" : [ "string", "null"] },
+    "x_large_url" : { "type" : [ "string", "null"] }
+  }
+}

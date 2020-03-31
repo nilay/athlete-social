@@ -1,0 +1,26 @@
+%script{ type: "text/template", id: "create-question"}
+  = form_tag(admin_questions_path, method: :post, id: "createQuestionForm") do
+    = hidden_field_tag("id", "", { class: "js-user-id" })
+    .text-area-container
+      .create-error-msg A new question is required in order to save
+      %textarea.text-area.js-create-textarea{ placeholder: "New question...", required: true, maxlength: 200 }
+
+    .toggle-btn-container.js-create-toggle-container
+      .toggle-btn.active
+        %input.toggle{ type: "checkbox", name: "status", value: "active", checked: "true" }
+      %label.input-label.active-label.animated.flipInX active
+      %label.input-label.inactive-label.animated.flipInX inactive
+      %a.tag-btn.js-tag-person{ href: "javascript:void(0)" }
+
+    .tag-athlete-container
+      .tag-search-wrapper
+        .tag-input-wrapper.none
+          %input.form-input.tag-input{ type: "text", placeholder: "Enter comma separated names or initials", maxlength: "50" }
+        #returnAthleteListWrapper.tag-athlete-list.none
+          %ul#returnTagList.returned-tagged-list
+      .tagged-people-container
+        %ul#tagList.tagged-list.none
+
+    .footer-container
+      %button.btn.primary-btn.js-create-question{ type: "submit" } add question
+      %button.btn.cancel-btn.js-close-modal{ type: "button" } cancel

@@ -1,0 +1,43 @@
+.content-container {
+  background-color: $dashboard-bg-color;
+  height: calc(100% - 2.75em);
+  overflow-y: scroll;
+
+  &[data-athlete="athlete"] {
+    overflow: hidden;
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  .content-container {
+    align-items: flex-start;
+    display: flex;
+    flex: 5 0px;
+    flex-flow: row wrap;
+    height: calc(100% - 3.9375em);
+    justify-content: flex-start;
+
+    .main-section {
+      margin-top: -1px;
+    }
+
+    .section-content {
+      flex: 1 100%;
+      flex-flow: row wrap;
+      overflow-y: hidden;
+    }
+  }
+};
+
+
+@include respond-to(medium) {
+  .content-container {
+    display: flex;
+    flex-flow: row wrap;
+    height: calc(100% - 3.4375em);
+  }
+};

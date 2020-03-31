@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="102px" height="102px" viewBox="0 0 102 102" version="1.1">
+  <title>
+    ic_person_black_24px (1)
+  </title>
+  <desc>
+    Created with Sketch.
+  </desc>
+  <defs>
+    <circle id="path-1" cx="50" cy="50" r="50"/>
+  </defs>
+  <g id="Athletes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <g id="Athlete-Profile@2x" sketch:type="MSArtboardGroup" transform="translate(-670.000000, -92.000000)">
+      <g id="Group" sketch:type="MSLayerGroup" transform="translate(125.000000, 78.000000)">
+        <g id="ic_person_black_24px-(1)" transform="translate(546.000000, 15.000000)">
+          <mask id="mask-2" sketch:name="Mask" fill="white">
+            <use xlink:href="#path-1"/>
+          </mask>
+          <use id="Mask" stroke="#CECECE" fill="#F7F7F7" sketch:type="MSShapeGroup" xlink:href="#path-1"/>
+          <g mask="url(#mask-2)" id="Shape" sketch:type="MSShapeGroup">
+            <g transform="translate(-3.000000, 12.000000)">
+              <path d="M53 53C62.7608333 53 70.6666667 45.0941667 70.6666667 35.3333333 70.6666667 25.5725 62.7608333 17.6666667 53 17.6666667 43.2391667 17.6666667 35.3333333 25.5725 35.3333333 35.3333333 35.3333333 45.0941667 43.2391667 53 53 53L53 53ZM53 61.8333333C41.2075 61.8333333 17.6666667 67.7516667 17.6666667 79.5L17.6666667 88.3333333 88.3333333 88.3333333 88.3333333 79.5C88.3333333 67.7516667 64.7925 61.8333333 53 61.8333333L53 61.8333333Z" fill="#494949" fill-rule="evenodd"/>
+              <path d="M0 0L106 0 106 106 0 106 0 0Z" fill="none"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

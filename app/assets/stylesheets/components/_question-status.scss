@@ -1,0 +1,35 @@
+div[data-react-class="QuestionView"] {
+  .question-status {
+    color: $dark-text;
+    display: flex;
+    font-size: $default-size;
+    padding: 0 0.6em 0 0;
+    text-transform: capitalize;
+
+    &.active {
+      color: $success;
+    }
+
+    &.inactive {
+      color: $dark-text;
+    }
+
+    &.archived {
+      color: $secondary-text;
+    }
+
+    &:hover {
+      color: $dark-text;
+    }
+
+    &:after {
+      align-self: center;
+      color: $secondary-text;
+      content: "|";
+      display: flex;
+      font-size: 0.9em;
+      font-weight: $font-light;
+      padding-left: 0.5em;
+    }
+  }
+}

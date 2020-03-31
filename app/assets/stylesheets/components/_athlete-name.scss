@@ -1,0 +1,7 @@
+div[data-react-class="AthleteView"] {
+  .username span {
+    font-size: $default-size;
+    font-weight: $font-bold;
+    text-transform: capitalize;
+  }
+}

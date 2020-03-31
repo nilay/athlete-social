@@ -1,0 +1,17 @@
+en:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+    labels:
+      username: false
+      email: false
+      remember_me: 'Remember me'
+    # hints:
+    #   defaults:
+    #     username: 'Make sure email is valid.'
+    #     password: 'No special characters, please.'

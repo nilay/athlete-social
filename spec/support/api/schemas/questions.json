@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "required": ["links", "questions"],
+  "properties": {
+    "links" : {
+      "type" : "object",
+      "items" : { "$ref" : "links.json"}
+    },
+    "questions": {
+      "type": "array",
+      "items":{ "$ref" : "question.json" }
+    }
+  }
+}

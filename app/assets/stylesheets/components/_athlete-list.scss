@@ -1,0 +1,50 @@
+div[data-react-class="AthleteView"] {
+  .athlete-list {
+    border: none;
+  }
+
+  .athlete-list-item {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 10.78125em;
+    opacity: 0;
+
+    &:hover {
+      .list-content {
+        transform: scale(1.04);
+      }
+    }
+
+    &.zoomIn {
+      opacity: 1;
+    }
+  }
+
+  .list-content {
+    align-items: center;
+    background-color: $white;
+    border: 1px solid $border;
+    display: flex;
+    flex: 1 0px;
+    flex-flow: row wrap;
+    height: 100%;
+    justify-content: center;
+    padding: 1em;
+    transform: scale(1);
+    transition: transform 200ms ease-out;
+    will-change: transform;
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  div[data-react-class="AthleteView"] {
+    .athlete-list-item {
+      height: 14.375em;
+    }
+  }
+};

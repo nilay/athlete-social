@@ -1,0 +1,9 @@
+div[data-react-class="QuestionView"] {
+  .question-title {
+    align-self: flex-start;
+    display: flex;
+    flex: 1 0px;
+    font-size: $default-size;
+    font-weight: $font-bold;
+  }
+}

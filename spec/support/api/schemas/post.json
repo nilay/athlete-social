@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "content_type",
+    "created_at",
+    "hashtags",
+    "mentions",
+    "urls",
+    "share_count",
+    "share_text",
+    "share_url",
+    "athlete",
+    "reactions",
+    "comments",
+    "likes"
+  ],
+  "properties" : {
+    "id" : { "type" : "integer" },
+    "content_type" : { "type" : "string" },
+    "created_at" : { "type" : "string", "format" : "date-time" },
+    "hashtags" : { "type" : "array" },
+    "mentions" : { "type" : "array",
+                   "items" : { "$ref" : "athlete.json" } },
+    "urls" : { "$ref" : "urls.json" },
+    "share_count" : { "type" : "integer" },
+    "share_text" : { "type" : "string" },
+    "share_url" : { "type" : "string" },
+    "athlete" : { "$ref" : "athlete_with_avatar_required.json" },
+    "reactions": {
+      "type": "array",
+      "items":{ "$ref" : "post_without_reactions.json" }
+    },
+    "comments": {
+      "type": "array",
+      "items":{ "$ref" : "comment.json" }
+    },
+    "likes" : { "$ref" : "likes.json" }
+  }
+}

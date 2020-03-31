@@ -1,0 +1,12 @@
+-# ALL questions
+
+.content-wrapper
+  = render "shared/search_container", btn_value: "create question", title: "create new question", modal: "#create-question"
+
+  .question-container
+    - if @questions.empty?
+      %p.no-questions There are no questions
+    - else
+      %ul.question-list
+        - @questions.reverse.each do |question|
+          = render "shared/question_body", question: question

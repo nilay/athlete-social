@@ -1,0 +1,234 @@
+input::-webkit-input-placeholder {
+  color: $placeholder-text !important;
+  font-weight: $font-light;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: $placeholder-text !important;
+  font-weight: $font-light;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: $placeholder-text !important;
+  font-weight: $font-light;
+}
+
+input:-ms-input-placeholder {
+  color: $placeholder-text !important;
+  font-weight: $font-light;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px $dropdown-bg-color inset !important;
+}
+
+input::-moz-autofill {
+  -moz-box-shadow: 0 0 0 1000px $dropdown-bg-color inset;
+}
+
+
+form.simple_form {
+  display: block;
+  width: 100%;
+}
+
+input.form-input {
+  appearance: none;
+  border: none;
+  border-radius: $border-radius;
+  display: block;
+  margin-top: 0.5em;
+  max-width: 30em;
+  padding: 0.7em;
+  width: 100%;
+
+  &.border-input {
+    border: 1px solid $border;
+  }
+}
+
+.form-check-label {
+  font-size: 0.9em;
+  margin-left: 0.2em;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+input.form-check {
+  appearance: none;
+  border: 1px solid $white;
+  border-radius: 0.125em;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.25em;
+  font-weight: 500;
+  height: 0.9em;
+  outline: 0;
+  vertical-align: middle;
+  width: 0.9em;
+
+  &:focus {
+
+  }
+
+  &:checked {
+    background-color: $primary;
+  }
+}
+
+input[type="submit"] {
+  @extend .btn;
+  background-color: transparent;
+  border: 1px solid $secondary-dark;
+  color: $secondary-dark;
+
+  &:hover {
+    color: $primary-dark;
+    background-color: $secondary-dark;
+  }
+}
+
+// Only properties available to style "search"
+.search-box {
+  @extend input.form-input;
+  background:
+    asset-url("icons/search-glass.svg")
+    no-repeat
+    20px
+    center
+    $white;
+	color: $dark-text;
+  cursor: pointer;
+	display: block;
+	letter-spacing: inherit;
+  padding: 0.7em 0 0.7em 2.8em;
+	text-shadow: none;
+  width: 100%;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+select.drop-down {
+  @extend input.form-input;
+  background:
+    asset-url("icons/dropdown-triangle.svg")
+    no-repeat
+    95%
+    center
+    $white;
+  font-weight: $font-bold;
+  margin-bottom: 0.9em;
+
+  &.dark-dropdown {
+    background:
+      asset-url("icons/dropdown-triangle-dark.svg")
+      no-repeat
+      95%
+      center
+      $white;
+  }
+
+  select {
+    appearance: none;
+  }
+
+  &:after {
+    content: "";
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $dark;
+    width: 0;
+  }
+}
+
+
+.toggle-btn-container {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding: 0 0.5em 1em 0;
+  position: relative;
+
+  .toggle-btn {
+    background-color: $toggle-off-bg;
+    border: 1px solid $toggle-off-bg;
+    border-radius: 0.5em;
+    display: inline-block;
+    height: 0.2em;
+    margin: 0 0.5em;
+    position: relative;
+    transition: background-color 200ms ease-out;
+    width: 2.5em;
+
+    &:before {
+      background-color: $white;
+      border: 1px solid $dark;
+      border-radius: 50%;
+      content: "";
+      height: 1em;
+      left: 0;
+      position: absolute;
+      top: -0.5em;
+      transform: translateX(-10%);
+      transition: $transform-transition;
+      width: 1em;
+      will-change: transform;
+    }
+
+    &.active {
+      background-color: $success;
+      border-color: $success;
+
+      &:before {
+        transform: translateX(125%);
+      }
+    }
+  }
+
+  .toggle {
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .input-label {
+    display: none;
+    text-transform: capitalize;
+  }
+}
+
+// Special classes
+.hint {
+  color: tomato;
+}
+
+.forgot-password-text {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  text-align: left;
+}
+
+.invite-athlete {
+  input {
+    margin: 1em auto;
+    max-width: 95%;
+
+    @include respond-to(small) {
+      max-width: 96%;
+    };
+  }
+}

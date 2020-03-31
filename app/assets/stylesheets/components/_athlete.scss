@@ -1,0 +1,66 @@
+div[data-react-class="AthleteView"],
+div[data-react-class="AthleteUserView"] {
+  display: flex;
+  flex: 1 100%;
+  min-width: 100%;
+
+  .admin-athletes-container {
+    display: block;
+    width: 100%;
+
+    &.show-details-view {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .athlete-grid-container {
+      display: block;
+      overflow-y: scroll;
+      padding: 0 0.4em 0.6em 0.4em;
+      width: 100%;
+    }
+
+    .text-container {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .pop-modal {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+
+    .container {
+      background-color: $white;
+      border-radius: $border-radius;
+      box-shadow: 0 2px 15px $dark;
+      padding: 1em;
+      position: relative;
+      margin: 5em auto 0 auto;
+      max-width: 37.5em;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  div[data-react-class="AthleteView"] {
+    .admin-athletes-container {
+      .athlete-grid-container {
+        padding: 0 0.2em 0.6em 0.2em;
+      }
+    }
+  }
+};

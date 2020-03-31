@@ -1,0 +1,39 @@
+.notification-container {
+  background-color: $white;
+  border: 1px solid $border;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0.6em 0.6em 0 0.6em;
+  padding: 0.7em 1.5em;
+
+  .notification-msg {
+    font-size: $default-size;
+    font-weight: $font-bold;
+  }
+
+  .request-btn {
+    display: none;
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  .notification-container {
+    align-items: center;
+
+    .notification-msg {
+      flex: 4 0px;
+    }
+
+    .request-btn {
+      display: block;
+      flex: 1 0px;
+      margin: 0 auto;
+      max-width: 13.034375em;
+    }
+  }
+};

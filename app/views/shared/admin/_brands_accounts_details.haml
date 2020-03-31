@@ -1,0 +1,48 @@
+.brand-detail-view.view.details-view
+  .brand-details-header
+    %button.simple-btn.brand-details-back-btn{ type: "button" }
+  -# TODO: make this dynamic
+  .brand-card
+    .logo-container
+      = image_tag "", alt: "nike logo"
+    .text-info-container
+      .contact-info-container
+        %h3.contact-name Johnathan Smith
+        %p.contact-title nike sales representative
+        %p.contact-email jsmith@nike.com
+        %p.contact-number (816) 345-7658
+      .brand-info-container
+        %h3.brand-name nike
+        %address.address-container
+          %p.street-name one bowernam drive
+          %p.city-state
+            beaverton, oregon
+            %span.postal-code 97005
+          %p.country united states
+      .btn-container
+        %button.btn{ type: "button", data:{ modal:{ target: "#deactivate-profile", title: "deactivate account" } } } deactivate
+
+  .notifications-container
+    %span.athlete-pending
+      %span.icons
+      %span.athlete-number.number 4
+    %span.question-pending
+      %span.icons
+      %span.question-number.number 2
+    %span.campaigns-pending
+      %span.icons
+      %span.campaigns-number.number 1
+
+  .tab-view-content
+    .tab-view-wrapper.tabular-wrapper-2
+      .tab-view-info.first-tab.active
+        %p.post-name roster
+      .tab-view-info.second-tab
+        %p.reaction-name campaigns
+      .bar
+
+  .tabular-multiview-container.tabular-2
+    .view.tabular-main-view
+      = render "shared/admin/brands_athlete_roster"
+    .tabular-details-view.view
+      = render "shared/admin/brands_total_campaigns"

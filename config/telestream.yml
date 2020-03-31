@@ -1,0 +1,20 @@
+development:
+  access_key: <%= ENV["TELESTREAM_ACCESS_KEY"] %>
+  secret_key: <%= ENV["TELESTREAM_SECRET_KEY"] %>
+  factory_id: <%= ENV["TELESTREAM_FACTORY_ID"] %>
+  api_host: <%= ENV["TELESTREAM_API_URL"] %>
+production:
+  access_key: <%= ENV["TELESTREAM_ACCESS_KEY"] %>
+  secret_key: <%= ENV["TELESTREAM_SECRET_KEY"] %>
+  factory_id: <%= ENV["TELESTREAM_FACTORY_ID"] %>
+  api_host: <%= ENV["TELESTREAM_API_URL"] %>
+test:
+  access_key: <%= ENV["TELESTREAM_ACCESS_KEY"] %>
+  secret_key: <%= ENV["TELESTREAM_SECRET_KEY"] %>
+  factory_id: <%= ENV["TELESTREAM_FACTORY_ID"] %>
+  api_host: <%= ENV["TELESTREAM_API_URL"] %>
+staging:
+  access_key: <%= ENV["TELESTREAM_ACCESS_KEY"] %>
+  secret_key: <%= ENV["TELESTREAM_SECRET_KEY"] %>
+  factory_id: <%= ENV["TELESTREAM_FACTORY_ID"] %>
+  api_host: <%= ENV["TELESTREAM_API_URL"] %>

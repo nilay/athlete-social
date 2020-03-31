@@ -1,0 +1,16 @@
+%script{ type: "text/template", id: "changeStatusModal" }
+  .main-content-container.change-status-container
+    %p.change-status-text Choose the new status for this question:
+    %strong.js-question-title
+  .footer-container.js-status-change-container
+    = form_tag(activate_admin_questions_path, method: :post, id: "activateForm") do
+      = hidden_field_tag("id", "", { class: "js-question-id" })
+      = hidden_field_tag("id", "", { class: "js-questioner-type" })
+      %button.btn.active-btn{ type: "submit", data:{ status: 'active' } } activate
+
+    = form_tag(deactivate_admin_questions_path, method: :post, id: "deactivateForm") do
+      = hidden_field_tag("id", "", { class: "js-question-id" })
+      = hidden_field_tag("id", "", { class: "js-questioner-type" })
+      %button.btn.non-active-btn{ type: "submit", data:{ status: 'inactive' } } deactivate
+
+    %button.btn.cancel-btn.js-close-modal{ type: "button" } cancel

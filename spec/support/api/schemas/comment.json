@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "text",
+    "created_at"
+  ],
+  "properties" : {
+    "id" : { "type" : "integer" },
+    "text" : { "type" : "string" },
+    "created_at" : { "type" : "string" , "format" : "date-time" },
+    "athlete" : { "$ref" : "athlete_with_avatar_required.json" }
+  }
+}

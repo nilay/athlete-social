@@ -1,0 +1,146 @@
+// All styles for TabView component
+
+.tab-view-container {
+  .tab-view-content {
+    align-items: center;
+    border-bottom: 1px solid $border;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .tab-view-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    overflow-x: scroll;
+    padding-bottom: 1em;
+    position: relative;
+  }
+
+  .tab-view-info {
+    align-items: center;
+    cursor: default !important;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 5.5em;
+
+    &:focus {
+      background-color: transparent;
+    }
+
+    &.active {
+      p {
+        color: $primary;
+      }
+    }
+
+    p {
+      color: rgba($disabled-text, 0.5);
+      flex: 1 100%;
+      text-align: center;
+      text-transform: capitalize;
+      transition: color 400ms ease-out;
+
+      &:first-of-type {
+        font-size: 1.125em;
+      }
+
+      &:last-of-type {
+        font-size: $default-size;
+      }
+    }
+  }
+
+  .bar {
+    bottom: 0;
+    background-color: $primary-dark;
+    height: .125em;
+    left: 0;
+    position: absolute;
+    width: 5.5em;
+    transform: translateX(0);
+    transition: $transform-transition;
+    will-change: transform;
+
+    &.active {
+      transform: translateX(100%);
+    }
+  }
+
+  .list {
+    .list-item {
+      cursor: pointer;
+      overflow: hidden;
+
+      &:hover {
+        border: 1px solid $primary-dark;
+      }
+
+      img,
+      video {
+        background-color: $white;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .multi-view-container {
+    height: calc(100vh - 24em);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .view {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    width: 100%;
+    will-change: transform;
+
+    .list {
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .nav-btn {
+    background-color: transparent;
+    display: none;
+    position: absolute;
+    top: 20em;
+    max-width: 5em;
+
+    &:hover {
+      background-color: darken($dashboard-bg-color, 3);
+    }
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to(medium) {
+  .tab-view-container {
+    .nav-btn {
+      display: inline-block;
+
+      &.tabview-prev-btn {
+        left: 1em;
+      }
+
+      &.tabview-next-btn {
+        right: 1em;
+      }
+    }
+  }
+};

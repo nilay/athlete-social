@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "required": [
+    "thumbnail_url",
+    "medium_url",
+    "original_url"
+  ],
+  "properties" : {
+    "thumbnail_url": { "type": ["string", "null"] },
+    "medium_url": { "type": ["string", "null"] },
+    "original_url": { "type": ["string", "null"] }
+  }
+}

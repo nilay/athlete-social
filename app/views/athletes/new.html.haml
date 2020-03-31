@@ -1,0 +1,17 @@
+.reset-password-container
+  .header
+    %a{ href: admin_signin_path, class: "home-link" }
+      = image_tag "logo.svg", alt: "pros logo", class: "animated fadeIn delay"
+  .content
+    .wrapper.reset-password-wrapper
+      .form-wrapper.animated.fadeIn.delay-6
+        %h2.reset-heading Sign Up
+        -flash.each do |key, value|
+          .alert{ :class => "#{key}" }
+            = sanitize(value)
+
+        %p.info-text
+          Enter your user info and we'll get you up and running to be a part of
+          the new athlete/fan social experience.
+
+        = render "forms/sign_up"

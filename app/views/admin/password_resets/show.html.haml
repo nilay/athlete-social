@@ -1,0 +1,33 @@
+.reset-password-container
+  .header
+    %a{ href: admin_signin_path, class: "home-link" }
+      = image_tag "logo.svg", alt: "pros logo"
+  .content
+    .wrapper.reset-password-wrapper
+      .form-wrapper
+        %h2.reset-heading reset your password
+        %p.info-text
+          Choose a new password for your account.
+
+        - if flash[:alert]
+          %p.alert= flash[:alert]
+
+        = simple_form_for [:admin, @password_reset],
+          html: { class: 'user-form reset-password-form'} do |form|
+
+          = form.hidden_field :token
+          .form-input-container
+            = form.input :password,
+              placeholder: "Enter new password",
+              label: false,
+              input_html: { class: "form-input" }
+
+          .form-input-container.last-input
+            = form.input :password_confirmation,
+              placeholder: "Confirm new password",
+              label: false,
+              input_html: { class: "form-input" }
+
+          .form-actions-container
+            = form.button :submit, "change password"
+

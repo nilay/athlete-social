@@ -1,0 +1,20 @@
+{
+  "title" : "Athlete",
+  "type" : "object",
+  "required" : [
+    "id",
+    "first_name",
+    "last_name",
+    "user_type",
+    "avatar",
+    "followed_by_current_user"
+  ],
+  "properties" : {
+    "id" : { "type" : "integer" },
+    "first_name" : { "type" : "string" },
+    "last_name" : { "type" : "string" },
+    "user_type" : { "type" : "string" },
+    "avatar" : { "$ref" : "avatar.json" },
+    "followed_by_current_user" : { "type" : "boolean" }
+  }
+}

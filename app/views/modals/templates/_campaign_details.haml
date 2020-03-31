@@ -1,0 +1,11 @@
+%script{ type: "text/template", id: "modal-campaign-details" }
+  .main-content-container
+    %section.feature
+      .img-container.feature-img
+        = image_tag "", alt: "campagin image"
+      .text-content
+        %h2.title campaign title
+        %p we need to re-think the content/UX/UI for this
+  .footer-container
+    %button.btn{ type: "button" } deactivate
+    %button.btn.cancel-btn.js-close-modal{ type: "button" } close

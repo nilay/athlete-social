@@ -1,0 +1,98 @@
+div[data-react-class="AthleteUserView"] {
+  .admin-athlete-profile-container {
+    border: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 75em;
+  }
+
+  .invite-btn {
+    background-color: transparent;
+    border: 1px solid $primary-dark;
+    border-radius: 5em;
+    font-weight: $font-light;
+    max-width: 10em;
+    padding: 0.5em;
+
+    &:hover {
+      color: $secondary-dark;
+      background-color: $primary-dark;
+    }
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  div[data-react-class="AthleteUserView"] {
+    padding-top: 1em;
+
+    .athlete-details-header {
+      padding-bottom: 2em;
+    }
+
+    .admin-athlete-profile-container {
+      padding-top: 0;
+    }
+
+    .img-container {
+      margin-top: -3.3em;
+      max-height: 6.5em;
+      max-width: 6.5em;
+
+      img {
+        min-height: 6.5em;
+        width: 100%;
+      }
+    }
+  }
+};
+
+
+@include respond-to(small) {
+  div[data-react-class="AthleteUserView"] {
+    .setting-btn-menu {
+      right: 2em;
+      top: 7.5em;
+    }
+  }
+};
+
+
+@include respond-to(medium) {
+  div[data-react-class="AthleteUserView"] {
+    .athlete-details-header {
+      padding-bottom: 1em;
+    }
+
+    .setting-btn-menu {
+      align-items: flex-end;
+      justify-content: flex-end;
+      right: auto;
+      top: auto;
+    }
+
+    .form-container {
+      padding: 0.6em 0;
+
+      form {
+        text-align: right;
+      }
+    }
+
+    .activate-btn {
+      color: $primary-dark !important;
+      background-color: $secondary_dark !important;
+
+      &:hover {
+        background-color: $secondary !important;
+      }
+    }
+
+    .deactivate-btn {
+      max-width: 11em !important;
+    }
+  }
+};

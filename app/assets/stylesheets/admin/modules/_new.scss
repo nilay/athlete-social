@@ -1,0 +1,39 @@
+.sign-in-container {
+  background-color: $primary-dark !important;
+  height: 100% !important;
+  width: 100%;
+
+  .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 20.9375em;
+    padding: 0 1em;
+
+    > div {
+      display: flex;
+      flex: 1 100%;
+      justify-content: center;
+    }
+  }
+
+  .logo-container {
+    margin: 6em auto 4em auto;
+  }
+
+  .form-container {
+    flex-flow: row wrap;
+  }
+
+  .forgot-password-text {
+    &:hover {
+      color: $secondary-light;
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}

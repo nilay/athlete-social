@@ -1,0 +1,16 @@
+a.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.br-mobile {
+  @include break_until(small);
+}
+
+.br-small {
+  @include break_at(small);
+}
+
+.br-medium {
+  @include break_at(medium);
+}

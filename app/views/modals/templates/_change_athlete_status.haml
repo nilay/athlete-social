@@ -1,0 +1,14 @@
+%script{ type: "text/template", id: "athleteChangeStatus" }
+  .main-content-container.change-status-container
+    %p.change-status-text Choose the new status for:
+    %strong.js-athlete-name
+  .footer-container.js-athlete-status-change-container
+    = form_tag(activate_admin_athletes_path, method: :post, id: "activateForm") do
+      = hidden_field_tag("id", "", { class: "js-athlete-info" })
+      %button.btn.active-btn{ type: "submit", data:{ status: 'active' } } activate
+
+    = form_tag(deactivate_admin_athletes_path, method: :post, id: "deactivateForm") do
+      = hidden_field_tag("id", "", { class: "js-athlete-info" })
+      %button.btn.non-active-btn{ type: "submit", data:{ status: 'inactive' } } deactivate
+
+    %button.btn.cancel-btn.js-close-modal{ type: "button" } cancel

@@ -1,0 +1,36 @@
+= simple_form_for @athlete, as: :athlete, url: athletes_path, method: :post,
+  html: { class: 'user-form reset-password-form', id: 'signUpForm' } do |form|
+
+  .form-input-container
+    = form.input :first_name,
+      placeholder: "Enter your first name",
+      label: false,
+      input_html: { class: "form-input" }
+
+  .form-input-container
+    = form.input :last_name,
+      placeholder: "Enter your last name",
+      label: false,
+      input_html: { class: "form-input" }
+
+  .form-input-container
+    = form.input :email,
+      placeholder: "Enter your email",
+      label: false,
+      input_html: { class: "form-input", type: "email" }
+
+  .form-input-container
+    = form.input :password,
+      placeholder: "Password",
+      label: false,
+      input_html: { class: "form-input" }
+
+  .form-input-container.last-input
+    = form.input :password_confirmation,
+      placeholder: "Confirm Password",
+      label: false,
+      input_html: { class: "form-input" }
+  = form.input :invite_token, as: :hidden, input_html: { value: params[:invite_token] }
+
+  .form-actions-container
+    = form.button :submit, "sign up"

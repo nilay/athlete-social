@@ -1,0 +1,17 @@
+{
+  "title" : "Athlete",
+  "type" : "object",
+  "required" : [
+    "id",
+    "first_name",
+    "last_name",
+    "user_type"
+  ],
+  "properties" : {
+    "id" : { "type" : "integer" },
+    "first_name" : { "type" : "string" },
+    "last_name" : { "type" : "string" },
+    "user_type" : { "type" : "string" },
+    "avatar" : { "$ref" : "avatar.json" }
+  }
+}

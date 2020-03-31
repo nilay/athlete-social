@@ -1,0 +1,16 @@
+%header.header#header{ data:{ turbolinks:{ permanent: true } } }
+  .menu-container
+    .menu-section
+      -# navicon menu
+      .middle
+        %a#menu.menu.outro.two{ href: "javascript:void(0)" }
+          %span
+      .logo
+
+  .user-container
+    .profile-img-container
+      = image_tag(current_user.avatar_url(:thumb, false), alt: "profile image")
+    %p.welcome-text= "Welcome, #{ current_user.first_name }"
+
+  .logout-container
+    = link_to("sign out", admin_signout_path, { class: "logout-link" })

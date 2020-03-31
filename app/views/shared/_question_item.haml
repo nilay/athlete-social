@@ -1,0 +1,9 @@
+-# "ALL" question view
+
+.question-container
+  - if questions.empty?
+    %p.no-questions There are no questions
+  - else
+    %ul.question-list
+      - questions.reverse.each do |question|
+        = render "shared/question_body", question: question

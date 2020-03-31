@@ -1,0 +1,7 @@
+.search-with-btns-container
+  %select.drop-down{ name: "select" }
+    %option{ value: "most_recent", selected: "" } Most recent
+  %input.search-box{ type: "search", results: "10", name: "s", placeholder: "Search all campaigns..." }
+  .btn-container
+    %button.grid-btn{ type: "button" }
+    %button.list-btn{ type: "button" }

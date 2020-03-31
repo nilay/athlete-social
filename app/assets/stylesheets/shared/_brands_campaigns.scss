@@ -1,0 +1,149 @@
+.brands-campaign-container {
+  .campaign-grid-container {
+    display: block;
+    height: 100%;
+    padding: 0.6em;
+    margin-top: 1em;
+    width: 100%;
+  }
+
+  .campaign-list {
+    align-items: center;
+    border: 1px solid $border;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    justify-content: space-around;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  .campaign-list-item {
+    align-items: center;
+    background-color: $white;
+    display: flex;
+    flex: 1 100%;
+    justify-content: flex-start;
+    padding: 0.4em 0 0 0.7em;
+
+    &:last-of-type {
+      padding-bottom: 0.4em;
+
+      .list-info {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .list-img-container {
+    align-items: center;
+    background-color: $nav-drawer-secondary-bg;
+    border: 1px solid $border;
+    border-radius: 3px;
+    display: flex;
+    flex: 1 0px;
+    height: 3.75em;
+    justify-content: center;
+    padding: 2em;
+    max-width: 3.75em;
+  }
+
+  .list-info {
+    border-bottom: 1px solid $border;
+    display: flex;
+    flex: 5 0px;
+    flex-flow: row wrap;
+    margin-left: 1.3em;
+    padding: 1em 0;
+
+    .title {
+      font-size: $default-size;
+      font-weight: $font-bold;
+      text-transform: capitalize;
+      width: 100%;
+    }
+
+    .date {
+      color: $secondary-text;
+      font-size: $default-size;
+      font-weight: $font-light;
+      margin-top: 0.3em;
+      width: 100%;
+    }
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  .brands-campaign-container {
+    .campaign-list {
+      background-color: $white;
+      padding: 0.5em;
+    }
+
+    .campaign-list-item {
+      align-items: flex-start;
+      flex: 1 33%;
+      flex-flow: row wrap;
+      padding: 0.7em 0.7em 2em 0.7em;
+
+      &:last-of-type {
+        padding: 0.7em 0.7em 2em 0.7em;
+      }
+    }
+
+    .list-img-container {
+      flex: 1 100%;
+      height: 13.375em;
+      min-width: 13.375em;
+      max-width: 100%;
+
+      img {
+        width: 3em;
+      }
+    }
+
+    .list-info {
+      border-bottom: none;
+      flex: 1 100%;
+      margin: 1em 0 0 0.2em;
+      padding: 0;
+
+      .date {
+        margin-top: 0.6em;
+      }
+    }
+  }
+};
+
+
+@include respond-to(large) {
+  .brands-campaign-container {
+    .campaign-list {
+      justify-content: flex-start;
+    }
+
+    .campaign-list-item {
+      flex: 1 26%;
+      max-width: 21.409375em;
+    }
+
+    .list-img-container {
+      height: 14.658125em;
+      max-width: 20.010625em;
+    }
+  }
+};
+
+
+@include respond-to(xlarge) {
+  .brands-campaign-container {
+    .campaign-list-item {
+      flex: 1 20%;
+      max-width: 18.051875em;
+    }
+  }
+};

@@ -1,0 +1,39 @@
+div[data-react-class="AthleteView"] {
+  .profile-img-container {
+    min-height: 4.5625em;
+
+    .avatar-wrapper {
+      align-items: center;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      height: 4.5625em;
+      width: 4.5625em;
+
+      img {
+        background-color: $dashboard-bg-color;
+        border-radius: 50%;
+        min-height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  div[data-react-class="AthleteView"] {
+    .profile-img-container {
+      min-height: 6.25em;
+
+      .avatar-wrapper {
+        height: 6.25em;
+        width: 6.25em;
+      }
+    }
+  }
+};

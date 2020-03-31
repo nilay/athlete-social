@@ -1,0 +1,168 @@
+div[data-react-class="QuestionView"] {
+  // li element
+  .question-item {
+    border-top: 1px solid $border;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 100%;
+    min-width: 100%;
+    overflow: hidden;
+    opacity: 0;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &:last-of-type {
+      .question-wrapper {
+        border-bottom: none;
+      }
+    }
+
+    &.slideInLeft {
+      opacity: 1;
+    }
+  }
+
+  .question {
+    background-color: $primary;
+    display: flex;
+    flex: 1 100%;
+    flex-flow: row wrap;
+    height: 4.34875em;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .question-wrapper {
+    background-color: $white;
+    display: block;
+    height: 4.34875em;
+    padding: 0.9em;
+    transform: translateX(0);
+    transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    width: 100%;
+    will-change: transform;
+    z-index: 100;
+
+    &.open {
+      transform: translateX(-77%);
+    }
+  }
+
+  .question-header {
+    align-items: stretch;
+    border-bottom: none;
+    display: flex;
+    flex: 1 100%;
+  }
+
+  .question-body {
+    align-items: center;
+    display: flex;
+    flex: 1 100%;
+    justify-content: flex-start;
+    margin-top: 0.3em;
+  }
+
+  .mobile-question-actions {
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+
+    .question-actions {
+      display: block;
+    }
+
+    .text-link {
+      color: $white-text;
+      display: inline-block;
+      font-size: $default-size;
+      height: 100%;
+      padding: 2em 0.5em;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      text-transform: capitalize;
+      top: 0;
+      transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      width: 5.9375em;
+      will-change: transform;
+
+      // edit
+      &.edit-link {
+        background-color: $success;
+        right: 0;
+        transform: translateX(24%);
+        z-index: 10;
+
+        &.open {
+          transform: translateX(0);
+        }
+      }
+
+      // archive
+      &.archive-link {
+        background-color: $primary-light;
+        right: -10px;
+        transform: translateX(8%);
+        z-index: 0;
+
+        &.open {
+          transform: translateX(-110%);
+        }
+      }
+    }
+  }
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@include respond-to("700px") {
+  div[data-react-class="QuestionView"] {
+    .question-item {
+      height: auto;
+    }
+  }
+};
+
+
+@include respond-to(small) {
+  div[data-react-class="QuestionView"] {
+    .question-wrapper {
+      padding: 1em;
+    }
+
+    .text-link {
+      color: $secondary-text;
+      display: flex;
+      font-size: 0.9em;
+      text-transform: capitalize;
+
+      &.edit-link {
+        border-right: 1px solid $border;
+        margin-right: 0.5em;
+        padding-right: 0.5em;
+      }
+
+      &:hover {
+        color: $dark-text;
+      }
+    }
+  }
+};
+
+
+@include respond-to(medium) {
+  div[data-react-class="QuestionView"] {
+    .question-wrapper.open {
+      transform: translateX(0);
+    }
+  }
+};

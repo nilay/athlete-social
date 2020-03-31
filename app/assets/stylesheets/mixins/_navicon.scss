@@ -1,0 +1,78 @@
+@mixin navicon {
+  .middle {
+    height: 1.6em;
+    margin-top: 0.1em;
+    width: 1.6em;
+
+    @include respond-to(small) {
+      margin-right: 1.5em;
+    };
+
+    @include respond-to(medium) {
+      display: none;
+    }
+  }
+
+  .menu {
+    cursor: pointer;
+    float: left;
+    height: 1.4375em;
+    overflow: hidden;
+    transition:
+      background-color 0.3s ease-out,
+      transform 0.3s ease-out;
+    transform-origin: center;
+    width: 1.4em;
+
+    &.active {
+      transform: rotate(180deg);
+      transform-origin: center;
+
+      span {
+        background-color: transparent;
+        &:before {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+        &:after{
+          bottom: 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+
+    span {
+      background-color: $secondary-dark;
+      float: left;
+      height: 2px;
+      position: relative;
+      top: 10px;
+      transition: 0.3s;
+      width: 23px;
+
+      &:before{
+        background-color: $secondary-dark;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        top: -6px;
+        width: 23px;
+      }
+
+      &:after{
+        background-color: $secondary-dark;
+        bottom: -6px;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 23px;
+      }
+    }
+  }
+}

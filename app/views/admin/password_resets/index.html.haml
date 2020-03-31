@@ -1,0 +1,23 @@
+.reset-password-container
+  .header
+    %a{ href: admin_signin_path, class: "home-link" }
+      = image_tag "logo.svg", alt: "pros logo"
+  .content
+    .wrapper.reset-password-wrapper
+      .form-wrapper
+        %h2.reset-heading reset your password
+        %p.info-text
+          Enter your user email and we'll send you a message with your
+          new password so you can be back at it again with the white Vans.
+
+        = simple_form_for [:admin, @password_reset],
+          html: { class: 'user-form reset-password-form'} do |form|
+
+          .form-input-container.last-input
+            = form.input :email,
+              placeholder: "Enter your email",
+              label: false,
+              input_html: { class: "form-input", type: "email" }
+
+          .form-actions-container
+            = form.submit "change password"
